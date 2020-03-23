@@ -1,0 +1,6 @@
+<h1>Welcome To The Artists Home Page!</h1>
+
+<% @artists.each do |art| %>
+    <h2><%= link_to art.name + " (#{art.song_count} song#{art.song_count == 1? "" : "s"})",
+    artist_path(art) %></h2>
+<% end %>
